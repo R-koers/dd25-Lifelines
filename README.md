@@ -1,0 +1,3 @@
+Als doel willen we een gegevens quiz maken, die je beantwoord met je eigen gegevens, vervolgens word dat vergeleken met het gemiddelde van jouw leeftijd en kijken we er ook naar waar je eigenlijk naar toe moet streven want het zou best voor kunnen komen dat 18 jarigen gemiddeld veel te veel eten en  te weinig sporten en dat je dat dus eigenlijk meer moet sporten, wat beter eet enzovoort. 
+
+Hierbij willen we een visueel element toepassen waardoor je ook daadwerkelijk kan zien of je nou boven het gemiddelde zit of onder het gemiddelde (en het gemiddelde hoeft niet goed of slecht te zijn, kan ook zijn dat het gemiddelde teveel sport of juist te weinig) 
