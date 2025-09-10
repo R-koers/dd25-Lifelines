@@ -17,10 +17,17 @@ const nextBtn = document.getElementById('next-btn');
 const resultText = document.getElementById('result-text');
 const pieCtx = document.getElementById('pieChart').getContext('2d');
 const barContainer = document.getElementById('barChart-container');
+const progressBar = document.getElementById('progress-bar');
+const progressText = document.getElementById('progress-text');
 
 function showQuestion() {
   const q = questions[currentQuestion];
   questionText.textContent = q.text;
+
+  // Update progress bar
+  const progressPercent = ((currentQuestion) / questions.length) * 100;
+  progressBar.style.width = progressPercent + '%';
+  progressText.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
 
   if (q.type === "number") {
     answerInput.style.display = "inline-block";
@@ -72,6 +79,10 @@ nextBtn.addEventListener('click', () => {
 });
 
 function calculateAndShowResults() {
+  // Update progress to 100% when finished
+  progressBar.style.width = '100%';
+  progressText.textContent = 'Quiz Complete!';
+
   // Calculate user's BMI
   let h_m = userData.height_cm / 100;
   userData.BMI = userData.weight_kg / (h_m*h_m);
