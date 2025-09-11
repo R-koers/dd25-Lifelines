@@ -2,30 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Health Quiz</title>
+  <title>Gezondheidsquiz</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="src/output.css">
 </head>
 <body>
-  <h1>Health Quiz</h1>
+  <h1>Gezondheidsquiz</h1>
+
   <div id="quiz-container">
     <div class="progress-container">
       <div id="progress-bar"></div>
-      <div id="progress-text">Question 1 of 6</div>
+      <div id="progress-text">Vraag 1 van 6</div>
     </div>
     <p id="question-text"></p>
     <input type="number" id="answer-input" style="display:none;">
     <select id="answer-select" style="display:none;">
-      <option value="MALE">Male</option>
-      <option value="FEMALE">Female</option>
+      <option value="MALE">Man</option>
+      <option value="FEMALE">Vrouw</option>
     </select>
-    <button id="next-btn">Next</button>
+    <button id="next-btn">Volgende</button>
   </div>
 
-  <h2>Results</h2>
+  <h2>Resultaten</h2>
   <p id="result-text"></p>
+
+  <h3>Verdeling van BMI in dataset</h3>
   <canvas id="pieChart"></canvas>
+
+  <h3>Vergelijking met gemiddelde van dataset</h3>
   <div id="barChart-container"></div>
+
+  <h3>Vergelijking met gemiddelde van hetzelfde geslacht</h3>
+  <div id="genderChart-container"></div>
 
   <script src="script.js"></script>
 </body>
