@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gezondheidsquiz Resultaten</title>
+  <link rel="stylesheet" href="src/output.css">
+<link rel="stylesheet" href="output.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body class="colorBlue font-sans">
+  <!-- Header -->
+  <header class="colorBlueText colorBlueText py-6 rounded-md">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold colorBlueText">Jouw Gezondheidsresultaten</h1>
+      <p class="mt-2 text-lg">Een overzicht van je gezondheid op basis van de quiz</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="container mx-auto px-4 py-10 space-y-10">
+
+    <!-- Persoonlijke gegevens -->
+    <section class="bg-white shadow-md rounded-2xl p-6">
+      <h1 class=" text-2xl font-semibold mb-4">Persoonlijke Gegevens</h1>
+      <div class="grid md:grid-cols-2 gap-6 place-items-center">
+        <div class="space-y-2 text-center text-2xl mt-6 md:mt-10">
+          <p><span class="font-semibold">Leeftijd:</span> <span id="age-text">-</span></p>
+          <p><span class="font-semibold">Geslacht:</span> <span id="gender-text">-</span></p>
+          <p><span class="font-semibold">Lengte:</span> <span id="height-text">-</span> cm</p>
+          <p><span class="font-semibold">Gewicht:</span> <span id="weight-text">-</span> kg</p>
+          <p class="mt-4"><span class="font-semibold">Samenvatting:</span> <span id="result-text">-</span></p>
+        </div>
+        <div class="flex justify-center items-center h-56 border-2 border-dashed border-gray-300 rounded-xl p-4">
+          <canvas id="pieChart" class="w-full h-full"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activiteit -->
+    <section class="bg-white shadow-md rounded-2xl p-6">
+      <h2 class="text-2xl font-semibold mb-4">Algemene Vergelijking (hele dataset)</h2>
+      <p class="mb-4 text-gray-700">Totale minuten beweging per week: <span id="weekly-activity-text" class="font-semibold">-</span></p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div id="overallLineChart-container" class="flex justify-center items-center h-64 border-2 border-dashed border-gray-300 rounded-xl"></div>
+        <div id="overallKcalChart-container" class="flex justify-center items-center h-64 border-2 border-dashed border-gray-300 rounded-xl"></div>
+      </div>
+    </section>
+
+    <!-- Calorie-inname -->
+    <section class="bg-white shadow-md rounded-2xl p-6">
+      <h2 class="text-2xl font-semibold mb-4">Vergelijking op Geslacht</h2>
+      <p class="mb-4 text-gray-700">Gemiddeld aantal calorieën per dag: <span id="daily-calories-text" class="font-semibold">-</span></p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div id="genderLineChart-container" class="flex justify-center items-center h-64 border-2 border-dashed border-gray-300 rounded-xl"></div>
+        <div id="genderKcalChart-container" class="flex justify-center items-center h-64 border-2 border-dashed border-gray-300 rounded-xl"></div>
+      </div>
+    </section>
+    <section>
+<a id="clear-storage-btn" href="index.html" class="px-4 py-2 colorBlueButton  text-white rounded-lg hover:bg-red-600 inline-block">
+  Wis userData
+</a>
+    </section>
+  </main>
+</body>
+</html>

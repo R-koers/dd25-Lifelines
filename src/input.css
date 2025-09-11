@@ -71,8 +71,8 @@ button:hover {
 
 /* === Charts === */
 canvas { 
-  margin: 30px auto;
-  max-width: 700px;
+  margin: 40px auto;
+  max-width: 900px;
   width: 100%; /* responsive */
   height: auto; 
   display: block;

@@ -84,3 +84,15 @@ canvas {
     font-size: 14px;
     color: #666;
 }
+
+.colorBlue {
+background-color: #CCEEF3
+}
+
+.colorBlueText{
+color: #28AAC5
+}
+
+.colorBlueButton {
+    background-color: #005DB4
+}
